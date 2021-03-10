@@ -37,6 +37,17 @@
             }
         }
         console.log(animal.AnimalMessage());
+        var person = {
+            name: "John",
+            lastName: "Travolta",
+            size: 1.80,
+            job: "Actor",
+            status: "8-TimesMarried",
+            actorMessage: function() {
+                return `The Person is ${this.name} ${this.lastName} is ${this.size}, he is a ${this.job} and he is ${this.status}.`;
+            }
+        }
+        console.log(person.actorMessage());
     </script>
 </body>
 
