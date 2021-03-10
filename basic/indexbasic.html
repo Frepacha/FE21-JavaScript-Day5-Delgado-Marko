@@ -20,12 +20,24 @@
             topspeed: 360,
             productionDate: 2021,
             showMessage: function() {
-                return "this car is" + this.brand;
-                console.table(car);
+                return "this car is: " + this.brand;
             }
         }
-    </script>
+        console.log(car.showMessage());
 
+        var animal = {
+            name: "Elephant",
+            size: "xxl",
+            color: "grey",
+            diet: "vegetarian",
+            lifeTime: 80,
+            AnimalMessage: function() {
+                return `Hi, the animal is a ${this.name} is ${this.size} big, his color is ${this.color} and is a ${this.diet} and it can live until ${this.lifeTime} years.`;
+
+            }
+        }
+        console.log(animal.AnimalMessage());
+    </script>
 </body>
 
 </html>
