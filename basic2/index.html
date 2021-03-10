@@ -24,6 +24,37 @@
         }
         var car1 = new car("ferrari", 3836, "green", 360, 2021);
         console.log(car1.showCar());
+
+        class animal {
+            constructor(name, size, color, diet, lifetime) {
+                this.name = name;
+                this.size = size;
+                this.color = color;
+                this.diet = diet;
+                this.lifetime = lifetime;
+            }
+            showAnimal() {
+                return `The animal is a ${this.name} and it is ${this.size} big and his color is ${this.color} and it is ${this.diet} and it can live until ${this.lifetime} years.`;
+            }
+        }
+        var animal1 = new animal("elephant", "xxl", "gray", "vegetarian", 80);
+        console.log(animal1.showAnimal());
+
+        class person {
+            constructor(name, lastName, size, job, status) {
+                this.name = name;
+                this.lastName = lastName;
+                this.size = size;
+                this.job = job;
+                this.status = status;
+            }
+            showPerson() {
+                return `The Person is ${this.name} ${this.lastName} and he is ${this.size}m high  and he works as ${this.job} and he has ${this.status}.`;
+            }
+        }
+
+        var person1 = new person("John", "Travolta", 1.80, "actor", "8-timesMarried");
+        console.log(person1.showPerson());
     </script>
 </body>
 
