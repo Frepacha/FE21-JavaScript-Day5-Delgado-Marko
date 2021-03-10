@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Day5 Intermediate 1</title>
+</head>
+
+<body>
+    <script>
+        class car {
+            constructor(brand, model, color, topspeed, productionDate) {
+                this.brand = brand;
+                this.model = model;
+                this.color = color;
+                this.topspeed = topspeed;
+                this.productionDate = productionDate;
+            }
+            showCar() {
+                return `<br>That is a ${this.brand} ${this.model} the color is ${this.color} it can run ${this.topspeed} km/h and was produced at ${this.productionDate}.<br>`
+            }
+        }
+        var car1 = new car("ferrari", 3836, "green", 360, 2021);
+        console.log(car1.showCar());
+
+        /* extentiion car  */
+
+        class motorbike extends car {
+            motorbike;
+            constructor(brand, model, color, topspeed, productionDate, motorbike) {
+                super(brand, model, color, topspeed, productionDate);
+                this.motorbike = motorbike;
+            }
+            showCar() {
+                return super.showCar() + "that is a " + this.motorbike + "<br>";
+            }
+        }
+        var motorbike1 = new motorbike("Ducati", 2000, "purple", 280, 1984, true);
+        document.write(motorbike1.showCar());
+
+        var car2 = new car("ford", "mustang", "red", 320, 1976, false);
+        document.write(car2.showCar());
+
+
+
+
+
+
+
+
+        class animal {
+            constructor(name, size, color, diet, lifetime) {
+                this.name = name;
+                this.size = size;
+                this.color = color;
+                this.diet = diet;
+                this.lifetime = lifetime;
+            }
+            showAnimal() {
+                return `<br> The animal is a ${this.name} and it is ${this.size} big and his color is ${this.color} and it is ${this.diet} and it can live until ${this.lifetime} years.<br>`;
+            }
+        }
+        var animal1 = new animal("elephant", "xxl", "gray", "vegetarian", 80);
+        console.log(animal1.showAnimal());
+
+        class person {
+            constructor(name, lastName, size, job, status) {
+                this.name = name;
+                this.lastName = lastName;
+                this.size = size;
+                this.job = job;
+                this.status = status;
+            }
+            showPerson() {
+                return `The Person is ${this.name} ${this.lastName} and he is ${this.size}m high  and he works as ${this.job} and he has ${this.status}.<br>`;
+            }
+        }
+
+        var person1 = new person("John", "Travolta", 1.80, "actor", "8-timesMarried");
+        console.log(person1.showPerson());
+
+        document.write(person1.showPerson(), animal1.showAnimal(),
+            car1.showCar());
+    </script>
+</body>
+
+</html>
