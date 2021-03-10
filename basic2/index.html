@@ -19,7 +19,7 @@
                 this.productionDate = productionDate;
             }
             showCar() {
-                return `The auto is ${this.brand} ${this.model} the color is ${this.color} it can run ${this.topspeed} km/h and was produced at ${this.productionDate}.`
+                return `<br>The auto is ${this.brand} ${this.model} the color is ${this.color} it can run ${this.topspeed} km/h and was produced at ${this.productionDate}.<br>`
             }
         }
         var car1 = new car("ferrari", 3836, "green", 360, 2021);
@@ -34,7 +34,7 @@
                 this.lifetime = lifetime;
             }
             showAnimal() {
-                return `The animal is a ${this.name} and it is ${this.size} big and his color is ${this.color} and it is ${this.diet} and it can live until ${this.lifetime} years.`;
+                return `<br> The animal is a ${this.name} and it is ${this.size} big and his color is ${this.color} and it is ${this.diet} and it can live until ${this.lifetime} years.<br>`;
             }
         }
         var animal1 = new animal("elephant", "xxl", "gray", "vegetarian", 80);
@@ -49,12 +49,15 @@
                 this.status = status;
             }
             showPerson() {
-                return `The Person is ${this.name} ${this.lastName} and he is ${this.size}m high  and he works as ${this.job} and he has ${this.status}.`;
+                return `The Person is ${this.name} ${this.lastName} and he is ${this.size}m high  and he works as ${this.job} and he has ${this.status}.<br>`;
             }
         }
 
         var person1 = new person("John", "Travolta", 1.80, "actor", "8-timesMarried");
         console.log(person1.showPerson());
+
+        document.write(person1.showPerson(), animal1.showAnimal(),
+            car1.showCar());
     </script>
 </body>
 
